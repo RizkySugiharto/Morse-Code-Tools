@@ -26,7 +26,7 @@ public class Utility {
 
     public static String[][] createDictCode() throws Exception {
 
-        FileReader daftarCode_File = new FileReader("daftarCode.txt");
+        FileReader daftarCode_File = new FileReader("codeList.txt");
         BufferedReader daftarCode_Buffered = new BufferedReader(daftarCode_File);
         String[][] dictCode = new String[2][55];
         String line = daftarCode_Buffered.readLine();
