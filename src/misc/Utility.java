@@ -8,10 +8,10 @@ public class Utility {
 
     public static void show_morseCodeList(String[][] dictCode) throws Exception {
 
-        FileReader daftarCode_File = new FileReader("daftarCode.txt");
-        BufferedReader daftarCode_Buffered = new BufferedReader(daftarCode_File);
+        FileReader codeList_File = new FileReader("codeList.txt");
+        BufferedReader codeList_Buffered = new BufferedReader(codeList_File);
 
-        String code = daftarCode_Buffered.readLine();
+        String code = codeList_Buffered.readLine();
 
         System.out.println("| Mean |   Code    |");
         System.out.println("--------------------");
@@ -26,10 +26,10 @@ public class Utility {
 
     public static String[][] createDictCode() throws Exception {
 
-        FileReader daftarCode_File = new FileReader("codeList.txt");
-        BufferedReader daftarCode_Buffered = new BufferedReader(daftarCode_File);
+        FileReader codeList_File = new FileReader("codeList.txt");
+        BufferedReader codeList_Buffered = new BufferedReader(codeList_File);
         String[][] dictCode = new String[2][55];
-        String line = daftarCode_Buffered.readLine();
+        String line = codeList_Buffered.readLine();
 
         int i = 0;
         while (line != null) {
@@ -44,7 +44,7 @@ public class Utility {
             dictCode[0][i] = str.nextToken();
             dictCode[1][i] = str.nextToken();
             i++;
-            line = daftarCode_Buffered.readLine();
+            line = codeList_Buffered.readLine();
         }
 
         return dictCode;
